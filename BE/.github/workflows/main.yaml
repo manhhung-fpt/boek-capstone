@@ -1,0 +1,44 @@
+on:
+  push:
+    branches: [ "main" ]
+name: Capstone project
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build dotnet to test
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+    - name: Publish to release
+      run: dotnet publish -c Release -o release
+    
+    - name: Transfer sources to server
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        source: "./release"
+        target: ${{ secrets.SOURCES_DIR }}
+
+    - name: Build and deploy project
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        script: | 
+          cd ${{ secrets.SOURCES_DIR }};
+          rm -rf out/;
+          mv release out
+          sudo service book-fair restart

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CloudinaryDotNet" Version="1.20.0" />
+    <PackageReference Include="DateTimeExtensions" Version="5.5.8" />
+    <PackageReference Include="FirebaseAdmin" Version="2.3.0" />
+    <PackageReference Include="MailKit" Version="3.5.0" />
+    <PackageReference Include="Reso.Core" Version="1.0.19" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.23" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Boek.Core\Boek.Core.csproj" />
+    <ProjectReference Include="..\Boek.Infrastructure\Boek.Infrastructure.csproj" />
+    <ProjectReference Include="..\Boek.Repository\Boek.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

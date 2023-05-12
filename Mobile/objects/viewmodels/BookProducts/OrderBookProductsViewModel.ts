@@ -1,0 +1,34 @@
+import { BasicBookViewModel } from "../Books/BasicBookViewModel";
+import { IssuerViewModel } from "../Users/issuers/IssuerViewModel";
+import { BasicBookProductItemViewModel } from "../BookProductItems/Mobile/BasicBookProductItemViewModel";
+export interface OrderBookProductsViewModel {
+  id: string;
+  bookId?: number;
+  genreId?: number;
+  campaignId?: number;
+  issuerId?: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  saleQuantity: number;
+  discount?: number;
+  salePrice: number;
+  type?: number;
+  typeName: string;
+  format?: number;
+  formatName: string;
+  withPdf?: boolean;
+  pdfExtraPrice?: number;
+  displayPdfIndex?: number;
+  withAudio?: boolean;
+  displayAudioIndex?: number;
+  audioExtraPrice?: number;
+  status?: number;
+  statusName: string;
+  note: string;
+  createdDate?: Date;
+  updatedDate?: Date;
+  book: BasicBookViewModel;
+  issuer: IssuerViewModel;
+  bookProductItems: BasicBookProductItemViewModel[];
+}

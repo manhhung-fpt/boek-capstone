@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "652368417331",
+    "project_id": "book-fair-fb8f1",
+    "storage_bucket": "book-fair-fb8f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652368417331:android:be575a7c2d86d72de88946",
+        "android_client_info": {
+          "package_name": "com.knguyenzzz.Boek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "652368417331-mjm9108ibsjb97u3fc04ga5sioq1rdq9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.knguyenzzz.Boek",
+            "certificate_hash": "ef0bcaa3cd3be7258f6f393b9805b062827032de"
+          }
+        },
+        {
+          "client_id": "652368417331-i91jda7knc2ardd0pnkq0cr3vog446qf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwY5QIHLOLpUJvtSQG_fu6MY-rOb02TXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "652368417331-i91jda7knc2ardd0pnkq0cr3vog446qf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "652368417331-1k2t1k8aks1g5483andfd5nja06th71d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.knguyenzzz.Boek"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
