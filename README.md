@@ -1,10 +1,10 @@
-# boek-capstone
+# Boek Capstone
 - This is a book fair platform that connects issuers and customers
 
-# Mentor
+## Mentor
 Our mentor is Mr.Lâm Hữu Khánh Phương
 
-# Team
+## Team
 - Our team consists of 5 members:
 	- Front-end
 		- [Nguyễn Đình Duy](https://github.com/duynd243)
@@ -15,7 +15,7 @@ Our mentor is Mr.Lâm Hữu Khánh Phương
 	- Mobile
 		- [Ngô Đình Khôi Nguyên](https://github.com/ndknitor)
 
-# Technology
+## Technology
 - Front-end : Typescript
 - Back-end : ASP.NET
 - Mobile : React Native
